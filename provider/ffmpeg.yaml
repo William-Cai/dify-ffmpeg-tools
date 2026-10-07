@@ -1,0 +1,20 @@
+identity:
+  author: "william-cai"
+  name: "ffmpeg_concat"
+  label:
+    en_US: "ffmpeg_concat"
+    zh_Hans: "ffmpeg_concat"
+    pt_BR: "ffmpeg_concat"
+    ja_JP: "ffmpeg_concat"
+  description:
+    en_US: "ffmpeg concat videos"
+    zh_Hans: "ffmpeg concat videos"
+    pt_BR: "ffmpeg concat videos"
+    ja_JP: "ffmpeg concat videos"
+  icon: "icon.svg"
+
+tools:
+  - tools/ffmpeg_concat.yaml
+extra:
+  python:
+    source: provider/ffmpeg.py

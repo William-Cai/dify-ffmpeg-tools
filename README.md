@@ -1,4 +1,4 @@
-## ffmpeg-concat
+## ffmpeg_concat
 
 **Author:** william-cai
 **Version:** 0.0.1

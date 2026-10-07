@@ -1,12 +1,12 @@
 version: 0.0.1
 type: plugin
 author: william-cai
-name: ffmpeg-concat
+name: ffmpeg_concat
 label:
-  en_US: ffmpeg-concat
-  ja_JP: ffmpeg-concat
-  zh_Hans: ffmpeg-concat
-  pt_BR: ffmpeg-concat
+  en_US: ffmpeg_concat
+  ja_JP: ffmpeg_concat
+  zh_Hans: ffmpeg_concat
+  pt_BR: ffmpeg_concat
 description:
   en_US: ffmpeg concat videos
   ja_JP: ffmpeg concat videos
@@ -21,7 +21,7 @@ resource:
       enabled: true
 plugins:
   tools:
-    - provider/ffmpeg-concat.yaml
+    - provider/ffmpeg.yaml
 meta:
   version: 0.0.1
   arch:
@@ -34,5 +34,5 @@ meta:
   minimum_dify_version: 0.0.1
 created_at: 2026-10-07T21:58:34.503232+08:00
 privacy: PRIVACY.md
-repo: https://github.com/William-Cai/ffmpeg-concat-plugin
+repo: https://github.com/William-Cai/ffmpeg_concat-plugin
 verified: false
