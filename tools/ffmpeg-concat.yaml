@@ -1,0 +1,37 @@
+identity:
+  name: ffmpeg_concat
+  author: william-cai
+  label:
+    en_US: FFmpeg Concat
+    zh_Hans: FFmpeg 视频拼接
+description:
+  human:
+    en_US: Merge multiple video URLs into a single video file using ffmpeg.
+    zh_Hans: 使用 ffmpeg 将多个视频地址按顺序合并为一条视频。
+  llm: Merge multiple videos into one.
+parameters:
+  - name: video_urls
+    type: string
+    required: true
+    label:
+      en_US: Video URLs
+      zh_Hans: 视频地址列表
+    human_description:
+      en_US: JSON array of video URLs, merged in order.
+      zh_Hans: 视频 URL 的 JSON 数组，按顺序合并。
+    llm_description: JSON array of video URLs, merged in order.
+    form: llm
+  - name: output_name
+    type: string
+    required: false
+    label:
+      en_US: Output file name
+      zh_Hans: 输出文件名
+    human_description:
+      en_US: Output file name without extension. Default is merged_video.
+      zh_Hans: 输出文件名（不含扩展名），默认 merged_video。
+    llm_description: Output file name without extension.
+    form: llm
+extra:
+  python:
+    source: tools/ffmpeg_concat.py
