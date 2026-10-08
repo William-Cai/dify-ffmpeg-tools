@@ -1,17 +1,17 @@
 version: 0.0.1
 type: plugin
 author: william-cai
-name: ffmpeg_concat
+name: ffmpeg_tools
 label:
-  en_US: ffmpeg_concat
-  ja_JP: ffmpeg_concat
-  zh_Hans: ffmpeg_concat
-  pt_BR: ffmpeg_concat
+  en_US: FFmpeg Tools
+  ja_JP: FFmpeg ツール
+  zh_Hans: FFmpeg 工具集
+  pt_BR: FFmpeg Ferramentas
 description:
-  en_US: ffmpeg concat videos
-  ja_JP: ffmpeg concat videos
-  zh_Hans: ffmpeg concat videos
-  pt_BR: ffmpeg concat videos
+  en_US: A collection of FFmpeg-based media processing tools for Dify
+  ja_JP: Dify 用の FFmpeg ベースのメディア処理ツールコレクション
+  zh_Hans: 基于 FFmpeg 的媒体处理工具集合，为 Dify 提供强大的音视频处理能力
+  pt_BR: Uma coleção de ferramentas de processamento de mídia baseadas em FFmpeg para Dify
 icon: icon.svg
 icon_dark: icon-dark.svg
 resource:
@@ -34,5 +34,5 @@ meta:
   minimum_dify_version: 0.0.1
 created_at: 2026-10-07T21:58:34.503232+08:00
 privacy: PRIVACY.md
-repo: https://github.com/William-Cai/ffmpeg_concat-plugin
+repo: https://github.com/William-Cai/dify-ffmpeg-tools
 verified: false

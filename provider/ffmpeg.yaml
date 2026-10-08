@@ -1,16 +1,16 @@
 identity:
   author: "william-cai"
-  name: "ffmpeg_concat"
+  name: "ffmpeg_tools"
   label:
-    en_US: "ffmpeg_concat"
-    zh_Hans: "ffmpeg_concat"
-    pt_BR: "ffmpeg_concat"
-    ja_JP: "ffmpeg_concat"
+    en_US: "FFmpeg Tools"
+    zh_Hans: "FFmpeg 工具集"
+    pt_BR: "FFmpeg Ferramentas"
+    ja_JP: "FFmpeg ツール"
   description:
-    en_US: "ffmpeg concat videos"
-    zh_Hans: "ffmpeg concat videos"
-    pt_BR: "ffmpeg concat videos"
-    ja_JP: "ffmpeg concat videos"
+    en_US: "A collection of FFmpeg-based media processing tools"
+    zh_Hans: "基于 FFmpeg 的媒体处理工具集合"
+    pt_BR: "Uma coleção de ferramentas de processamento de mídia baseadas em FFmpeg"
+    ja_JP: "FFmpeg ベースのメディア処理ツールコレクション"
   icon: "icon.svg"
 
 tools:

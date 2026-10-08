@@ -1,0 +1,74 @@
+name: Auto Build Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version number (e.g., 0.0.2)'
+        required: true
+        type: string
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download Dify CLI tool
+        run: |
+          mkdir -p $RUNNER_TEMP/bin
+          cd $RUNNER_TEMP/bin
+          wget https://github.com/langgenius/dify-plugin-daemon/releases/download/0.0.6/dify-plugin-linux-amd64
+          chmod +x dify-plugin-linux-amd64
+
+      - name: Get plugin info from manifest
+        id: get_info
+        run: |
+          PLUGIN_NAME=$(grep "^name:" manifest.yaml | cut -d' ' -f2)
+          VERSION=$(grep "^version:" manifest.yaml | cut -d' ' -f2)
+          echo "plugin_name=$PLUGIN_NAME" >> $GITHUB_OUTPUT
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "Plugin: $PLUGIN_NAME v$VERSION"
+
+      - name: Package plugin
+        id: package
+        run: |
+          PACKAGE_NAME="${{ steps.get_info.outputs.plugin_name }}-${{ steps.get_info.outputs.version }}.difypkg"
+          $RUNNER_TEMP/bin/dify-plugin-linux-amd64 plugin package . -o "$PACKAGE_NAME"
+          echo "package_name=$PACKAGE_NAME" >> $GITHUB_OUTPUT
+          echo "Packaged: $PACKAGE_NAME"
+          ls -lh "$PACKAGE_NAME"
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: ${{ steps.get_info.outputs.plugin_name }} v${{ steps.get_info.outputs.version }}
+          body: |
+            ## FFmpeg Tools Plugin v${{ steps.get_info.outputs.version }}
+
+            ### Installation
+            1. Download the `.difypkg` file below
+            2. Go to your Dify workspace → Plugins
+            3. Click "Install Plugin" → "Upload Plugin File"
+            4. Select the downloaded `.difypkg` file
+
+            ### What's included
+            - Video concatenation tool
+            - FFmpeg-based media processing
+
+            ### Requirements
+            - Dify >= 0.0.1
+            - FFmpeg installed on the runtime environment
+          files: |
+            ${{ steps.package.outputs.package_name }}
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

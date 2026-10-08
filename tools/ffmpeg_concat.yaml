@@ -2,13 +2,13 @@ identity:
   name: ffmpeg_concat
   author: william-cai
   label:
-    en_US: FFmpeg Concat
-    zh_Hans: FFmpeg 视频拼接
+    en_US: Video Concatenation
+    zh_Hans: 视频拼接
 description:
   human:
-    en_US: Merge multiple video URLs into a single video file using ffmpeg.
-    zh_Hans: 使用 ffmpeg 将多个视频地址按顺序合并为一条视频。
-  llm: Merge multiple videos into one.
+    en_US: Merge multiple video URLs into a single video file using FFmpeg. Videos are concatenated in the order provided.
+    zh_Hans: 使用 FFmpeg 将多个视频 URL 合并为单个视频文件。视频按提供的顺序拼接。
+  llm: Merge multiple videos into one. Accepts a JSON array of video URLs and combines them sequentially into a single output video.
 parameters:
   - name: video_urls
     type: string
