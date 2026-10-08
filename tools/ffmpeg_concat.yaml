@@ -6,9 +6,9 @@ identity:
     zh_Hans: 视频拼接
 description:
   human:
-    en_US: Merge multiple video URLs into a single video file using FFmpeg. Videos are concatenated in the order provided.
-    zh_Hans: 使用 FFmpeg 将多个视频 URL 合并为单个视频文件。视频按提供的顺序拼接。
-  llm: Merge multiple videos into one. Accepts a JSON array of video URLs and combines them sequentially into a single output video.
+    en_US: Merge multiple video URLs into a single video file using FFmpeg. Videos are concatenated in the order provided. **Note:** The output video is stored temporarily on Dify Cloud and is only available for 5 minutes.
+    zh_Hans: 使用 FFmpeg 将多个视频 URL 合并为单个视频文件。视频按提供的顺序拼接。**注意：** 输出的视频文件存储在 Dify 云端，仅有 5 分钟有效期。
+  llm: Merge multiple videos into one. Accepts a JSON array of video URLs and combines them sequentially into a single output video. The output file is temporary and expires after 5 minutes.
 parameters:
   - name: video_urls
     type: string
