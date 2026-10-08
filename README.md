@@ -76,6 +76,8 @@ In a Dify workflow or chatflow, you can invoke the tool with:
 
 The tool will return a merged video file that can be used in subsequent workflow steps or presented to the user.
 
+**Important:** The output video file is stored temporarily on Dify Cloud and is only available for **5 minutes**. Please download or use the file immediately after generation.
+
 ### Limitations
 
 - All input videos should have compatible formats (codec, resolution, frame rate) for seamless concatenation. Mismatched formats may result in playback issues.
