@@ -2,11 +2,11 @@
   <!-- Dark mode: rounded dark background -->
   <rect width="512" height="512" rx="112" ry="112" fill="#262626"/>
   <!-- FFmpeg official icon, centered upper area -->
-  <g transform="translate(136,78) scale(2.5)">
+  <g transform="translate(112,55) scale(3.0)">
     <path fill="#378F3B" d="M 13,13 L 13,20 L 21,23 L 12,33 L 12,58 L 15,61 L 20,60 L 59,21 L 66,23 L 12,77 L 13,82 L 40,83 L 74,53 L 74,59 L 56,77 L 56,80 L 59,83 L 82,82 L 82,75 L 73,72 L 83,62 L 83,37 L 80,34 L 75,35 L 36,74 L 29,72 L 83,18 L 82,13 L 55,12 L 21,42 L 21,36 L 39,18 L 39,15 L 36,12 Z"/>
   </g>
-  <!-- "Tools" label, bottom center -->
-  <text x="256" y="418" text-anchor="middle"
+  <!-- "Tools" label, centered near bottom -->
+  <text x="256" y="448" text-anchor="middle"
         font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
-        font-size="68" font-weight="700" fill="#F5F5F5" letter-spacing="1">Tools</text>
+        font-size="60" font-weight="700" fill="#F5F5F5" letter-spacing="1">Tools</text>
 </svg>
